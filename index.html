@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo Bank App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="flex items-center justify-center bg-[#f4f5f7]">
+    <main class=" w-[450px] h-[100vh] flex flex-col items-center justify-center">
+        <div class="h-[125px] w-[70%] bg-[url(./assets/bg.png)] bg-cover flex items-center justify-center">
+            <img src="./assets/Group.png" alt="">
+        </div>
+        <form class=" flex flex-col gap-4 p-8 w-10/12 bg-white rounded-3xl">
+            <div class="flex flex-col gap-3">
+                <label for="phone" class="text-[#080808] font-medium">Mobile Number</label>
+                <input type="text" placeholder="Enter your number"
+                    class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0"
+                    id="phone-input" />
+            </div>
+            <div class="flex flex-col gap-3">
+                <label for="pin" class="text-[#080808] font-medium">Outfit</label>
+                <input type="text" placeholder="Enter 4 Digit Pin"
+                    class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0"
+                    id="pin-input" />
+            </div>
+            <button class="btn bg-[#0874F2] text-white rounded-4xl h-14 text-xl font-semibold"
+                id="login-btn">Primary</button>
+        </form>
+    </main>
+    <script src="./login.js"></script>
+</body>
+
+</html>
