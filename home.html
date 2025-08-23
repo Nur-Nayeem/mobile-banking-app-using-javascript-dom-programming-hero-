@@ -4,10 +4,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
-<body>
+<body class=" max-w-[450px] mx-auto pb-5 flex flex-col items-center justify-center bg-[#f4f5f7] text-[#080808]">
+    <div class=" bg-white h-max mb-6 rounded-b-4xl">
+        <nav class="mb-8 px-6 py-3 border-b-1 border-[rgba(8,8,8,0.1)] ">
+            <div class="flex justify-between items-center">
+                <div class="flex">
+                    <figure class="w-[52px] h-12">
+                        <img class="w-full h-full" src="./assets/Group.png" alt="">
+                    </figure>
+                    <div>
+                        <h3>$4500</h3>
+                        <p>Abailable Balance</p>
+                    </div>
+                </div>
+                <button class="rounded-[8px] border-1 border-[rgba(8,8,8,0.1)] py-[10px] px-3 text-[rgba(8,8,8,0.5)]">
+                    <i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i>
+                    Log Out
+                </button>
+            </div>
+        </nav>
+        <main class="px-6">
+            <div class="mb-8">
+                <h2 class="text-2xl font-black mb-3">🔥 Welcome to Payooo!</h2>
+                <p class="text-[rgba(8,8,8,0.5)] leading-normal">Enjoy easy and convenient financial services with us.
+                    Cashout charge is
+                    low and </p>
+            </div>
+            <div class="grid grid-cols-3 gap-4 text-sm py-6">
+                <button
+                    class="flex flex-col items-center gap-2 py-5 px-4 border-1 border-[rgba(8,8,8,0.1)] rounded-xl ">
+                    <figure>
+                        <img class="w-full h-full" src="./assets/money1.png" alt="">
+                    </figure>
+                    <p class="text-[rgba(8,8,8,0.7)]">Add Money</p>
+                </button>
+                <button
+                    class="flex flex-col items-center gap-2 py-5 px-4 border-1 border-[rgba(8,8,8,0.1)] rounded-xl ">
+                    <figure>
+                        <img class="w-full h-full" src="./assets/money1.png" alt="">
+                    </figure>
+                    <p class="text-[rgba(8,8,8,0.7)]">Add Money</p>
+                </button>
+                <button
+                    class="flex flex-col items-center gap-2 py-5 px-4 border-1 border-[rgba(8,8,8,0.1)] rounded-xl ">
+                    <figure>
+                        <img class="w-full h-full" src="./assets/money1.png" alt="">
+                    </figure>
+                    <p class="text-[rgba(8,8,8,0.7)]">Add Money</p>
+                </button>
+                <button
+                    class="flex flex-col items-center gap-2 py-5 px-4 border-1 border-[rgba(8,8,8,0.1)] rounded-xl ">
+                    <figure>
+                        <img class="w-full h-full" src="./assets/money1.png" alt="">
+                    </figure>
+                    <p class="text-[rgba(8,8,8,0.7)]">Add Money</p>
+                </button>
+                <button
+                    class="flex flex-col items-center gap-2 py-5 px-4 border-1 border-[rgba(8,8,8,0.1)] rounded-xl ">
+                    <figure>
+                        <img class="w-full h-full" src="./assets/money1.png" alt="">
+                    </figure>
+                    <p class="text-[rgba(8,8,8,0.7)]">Add Money</p>
+                </button>
+                <button
+                    class="flex flex-col items-center gap-2 py-5 px-6 border-1 border-[rgba(8,8,8,0.1)] rounded-xl ">
+                    <figure>
+                        <img class="w-full h-full" src="./assets/money1.png" alt="">
+                    </figure>
+                    <p class="text-[rgba(8,8,8,0.7)]">Add Money</p>
+                </button>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- History  -->
+    <div class="w-full flex flex-col items-center">
+        <div class="mb-4 flex items-center px-5 justify-between w-11/12">
+            <h3>Latest Payment</h3>
+            <a href="#">View All</a>
+        </div>
+        <div class="grid grid-cols-1 gap-5 w-11/12">
+            <div class="flex justify-between items-center py-[10px] px-5 bg-white rounded-xl w-full">
+                <div class="flex items-center">
+                    <figure
+                        class="bg-[rgba(8,8,8,0.05)] w-[46px] h-[46px] rounded-full flex items-center justify-center">
+                        <img src="./assets/money1.png" alt="">
+                    </figure>
+                    <div class="p-2">
+                        <h3>Electricity Bill</h3>
+                        <p>Today 01:44 AM</p>
+                    </div>
+                </div>
+                <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+            </div>
+            <div class="flex justify-between items-center py-[10px] px-5 bg-white rounded-xl w-full">
+                <div class="flex items-center">
+                    <figure
+                        class="bg-[rgba(8,8,8,0.05)] w-[46px] h-[46px] rounded-full flex items-center justify-center">
+                        <img src="./assets/money1.png" alt="">
+                    </figure>
+                    <div class="p-2">
+                        <h3>Bank Deposit</h3>
+                        <p>Today 01:44 AM</p>
+                    </div>
+                </div>
+                <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+            </div>
+            <div class="flex justify-between items-center py-[10px] px-5 bg-white rounded-xl w-full">
+                <div class="flex items-center">
+                    <figure
+                        class="bg-[rgba(8,8,8,0.05)] w-[46px] h-[46px] rounded-full flex items-center justify-center">
+                        <img src="./assets/money1.png" alt="">
+                    </figure>
+                    <div class="p-2">
+                        <h3>Mobile Recharge</h3>
+                        <p>Today 01:44 AM</p>
+                    </div>
+                </div>
+                <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+            </div>
+            <div class="flex justify-between items-center py-[10px] px-5 bg-white rounded-xl w-full">
+                <div class="flex items-center">
+                    <figure
+                        class="bg-[rgba(8,8,8,0.05)] w-[46px] h-[46px] rounded-full flex items-center justify-center">
+                        <img src="./assets/money1.png" alt="">
+                    </figure>
+                    <div class="p-2">
+                        <h3>Gas Bill</h3>
+                        <p>Today 01:44 AM</p>
+                    </div>
+                </div>
+                <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Add money  -->
+
+    <form class="w-full flex flex-col items-center ">
+
+        <div class="mb-4 flex items-center px-5 justify-between w-11/12">
+            <h3>Add Money</h3>
+        </div>
+        <div class="bg-white w-11/12 flex flex-col items-center gap-2">
+            <div class="flex flex-col gap-3 w-11/12">
+                <label for="phone" class="text-[#080808] font-medium">Mobile Number</label>
+                <select
+                    class="select w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0">
+                    <option disabled selected>Select a bank</option>
+                    <option>Islami Bank</option>
+                    <option>AB Bank</option>
+                    <option>Rupali Bank</option>
+                </select>
+
+            </div>
+            <div class="flex flex-col gap-3 w-11/12">
+                <label for="phone" class="text-[#080808] font-medium">Mobile Number</label>
+                <input type="text" placeholder="Enter your number"
+                    class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0"
+                    id="phone-input" />
+            </div>
+            <div class="flex flex-col gap-3 w-11/12">
+                <label for="pin" class="text-[#080808] font-medium">Outfit</label>
+                <input type="text" placeholder="Enter 4 Digit Pin"
+                    class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0"
+                    id="pin-input" />
+            </div>
+            <div class="flex flex-col gap-3 w-11/12">
+                <label for="pin" class="text-[#080808] font-medium">Outfit</label>
+                <input type="text" placeholder="Enter 4 Digit Pin"
+                    class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0"
+                    id="pin-input" />
+            </div>
+            <button class="btn bg-[#0874F2] text-white rounded-4xl h-14 text-xl font-semibold w-11/12"
+                id="login-btn">Add
+                Money</button>
+        </div>
+    </form>
+
+
 
 </body>
 
