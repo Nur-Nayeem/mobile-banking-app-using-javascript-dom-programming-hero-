@@ -1,3 +1,16 @@
 * {
     font-family: "Outfit", sans-serif;
 }
+
+.active-btn {
+    border: 1px solid #0874f2;
+    color: #0874f2;
+}
+
+.displayHiddenSection {
+    display: none;
+}
+
+.displayShowSection {
+    display: flex;
+}

@@ -17,7 +17,7 @@
 
 </head>
 
-<body class=" max-w-[450px] mx-auto pb-5 flex flex-col items-center justify-center bg-[#f4f5f7] text-[#080808]">
+<body class="max-w-[450px] m-auto pb-5 flex flex-col items-center justify-center bg-[#f4f5f7] text-[#080808]">
     <div class=" bg-white h-max mb-6 rounded-b-4xl">
         <nav class="mb-8 px-6 py-3 border-b-1 border-[rgba(8,8,8,0.1)] ">
             <div class="flex justify-between items-center">
@@ -26,7 +26,7 @@
                         <img class="w-full h-full" src="./assets/Group.png" alt="">
                     </figure>
                     <div>
-                        <h3>$4500</h3>
+                        <h3>$<span id="money">6500</span></h3>
                         <p>Abailable Balance</p>
                     </div>
                 </div>
@@ -43,48 +43,48 @@
                     Cashout charge is
                     low and </p>
             </div>
-            <div class="grid grid-cols-3 gap-4 text-sm py-6">
-                <button
+            <div id="button-container" class="grid grid-cols-3 gap-4 text-sm py-6">
+                <button id="add-money-btn-box"
+                    class="flex flex-col items-center gap-2 py-5 px-4 border-1 border-[rgba(8,8,8,0.1)] rounded-xl ">
+                    <figure>
+                        <img class="w-full h-full" src="./assets/wallet1.png" alt="">
+                    </figure>
+                    <p class="text-[rgba(8,8,8,0.7)]">Add Money</p>
+                </button>
+                <button id="cash-out-btn-box"
+                    class="flex flex-col items-center gap-2 py-5 px-4 border-1 border-[rgba(8,8,8,0.1)] rounded-xl ">
+                    <figure>
+                        <img class="w-full h-full" src="./assets/send1.png" alt="">
+                    </figure>
+                    <p class="text-[rgba(8,8,8,0.7)]">Cashout</p>
+                </button>
+                <button id="send-money-btn-box"
                     class="flex flex-col items-center gap-2 py-5 px-4 border-1 border-[rgba(8,8,8,0.1)] rounded-xl ">
                     <figure>
                         <img class="w-full h-full" src="./assets/money1.png" alt="">
                     </figure>
-                    <p class="text-[rgba(8,8,8,0.7)]">Add Money</p>
+                    <p class="text-[rgba(8,8,8,0.7)]">Transfer Money</p>
                 </button>
-                <button
+                <button id="get-bonus-btn-box"
                     class="flex flex-col items-center gap-2 py-5 px-4 border-1 border-[rgba(8,8,8,0.1)] rounded-xl ">
                     <figure>
-                        <img class="w-full h-full" src="./assets/money1.png" alt="">
+                        <img class="w-full h-full" src="./assets/bonus1.png" alt="">
                     </figure>
-                    <p class="text-[rgba(8,8,8,0.7)]">Add Money</p>
+                    <p class="text-[rgba(8,8,8,0.7)]">Get Bonus</p>
                 </button>
-                <button
+                <button id="pay-bill-btn-box"
                     class="flex flex-col items-center gap-2 py-5 px-4 border-1 border-[rgba(8,8,8,0.1)] rounded-xl ">
                     <figure>
-                        <img class="w-full h-full" src="./assets/money1.png" alt="">
+                        <img class="w-full h-full" src="./assets/purse1.png" alt="">
                     </figure>
-                    <p class="text-[rgba(8,8,8,0.7)]">Add Money</p>
+                    <p class="text-[rgba(8,8,8,0.7)]">Pay Bill</p>
                 </button>
-                <button
-                    class="flex flex-col items-center gap-2 py-5 px-4 border-1 border-[rgba(8,8,8,0.1)] rounded-xl ">
-                    <figure>
-                        <img class="w-full h-full" src="./assets/money1.png" alt="">
-                    </figure>
-                    <p class="text-[rgba(8,8,8,0.7)]">Add Money</p>
-                </button>
-                <button
-                    class="flex flex-col items-center gap-2 py-5 px-4 border-1 border-[rgba(8,8,8,0.1)] rounded-xl ">
-                    <figure>
-                        <img class="w-full h-full" src="./assets/money1.png" alt="">
-                    </figure>
-                    <p class="text-[rgba(8,8,8,0.7)]">Add Money</p>
-                </button>
-                <button
+                <button id="transection-history-box"
                     class="flex flex-col items-center gap-2 py-5 px-6 border-1 border-[rgba(8,8,8,0.1)] rounded-xl ">
                     <figure>
-                        <img class="w-full h-full" src="./assets/money1.png" alt="">
+                        <img class="w-full h-full" src="./assets/transaction1.png" alt="">
                     </figure>
-                    <p class="text-[rgba(8,8,8,0.7)]">Add Money</p>
+                    <p class="text-[rgba(8,8,8,0.7)]">Transection</p>
                 </button>
 
             </div>
@@ -92,10 +92,10 @@
     </div>
 
     <!-- History  -->
-    <div class="w-full flex flex-col items-center">
+    <div id="transection-history" class="w-full flex flex-col items-center">
         <div class="mb-4 flex items-center px-5 justify-between w-11/12">
-            <h3>Latest Payment</h3>
-            <a href="#">View All</a>
+            <h3 id="history-type" class="text-xl text-[rgba(8,8,8,0.9)] font-semibold">Latest Payment</h3>
+            <a class="text-[rgba(8,8,8,0.5)] text-sm" href="#">View All</a>
         </div>
         <div class="grid grid-cols-1 gap-5 w-11/12">
             <div class="flex justify-between items-center py-[10px] px-5 bg-white rounded-xl w-full">
@@ -154,18 +154,17 @@
         </div>
     </div>
 
-    <!-- Add money  -->
-
-    <form class="w-full flex flex-col items-center ">
+    <!-- Add money section -->
+    <form id="add-money-section" class="displayHiddenSection w-full flex flex-col items-center ">
 
         <div class="mb-4 flex items-center px-5 justify-between w-11/12">
-            <h3>Add Money</h3>
+            <h3 class="text-xl text-[rgba(8,8,8,0.9)] font-semibold">Add Money</h3>
         </div>
-        <div class="bg-white w-11/12 flex flex-col items-center gap-2">
+        <div class="bg-white w-11/12 flex flex-col items-center gap-2 py-6">
             <div class="flex flex-col gap-3 w-11/12">
                 <label for="phone" class="text-[#080808] font-medium">Mobile Number</label>
                 <select
-                    class="select w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0">
+                    class="select w-full h-14 rounded-4xl text-[rgba(8,8,8,0.7)] font-light bg-[#F4F5F7] border-0 outline-0">
                     <option disabled selected>Select a bank</option>
                     <option>Islami Bank</option>
                     <option>AB Bank</option>
@@ -174,30 +173,152 @@
 
             </div>
             <div class="flex flex-col gap-3 w-11/12">
-                <label for="phone" class="text-[#080808] font-medium">Mobile Number</label>
+                <label for="phone" class="text-[#080808] font-medium">Bank Account Number</label>
                 <input type="text" placeholder="Enter your number"
                     class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0"
                     id="phone-input" />
             </div>
             <div class="flex flex-col gap-3 w-11/12">
-                <label for="pin" class="text-[#080808] font-medium">Outfit</label>
-                <input type="text" placeholder="Enter 4 Digit Pin"
-                    class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0"
-                    id="pin-input" />
+                <label for="pin" class="text-[#080808] font-medium">Amount to Add</label>
+                <input id="add-amount-input" type="number" placeholder="Enter amount"
+                    class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0" />
             </div>
             <div class="flex flex-col gap-3 w-11/12">
-                <label for="pin" class="text-[#080808] font-medium">Outfit</label>
+                <label for="pin" class="text-[#080808] font-medium">Pin Number</label>
                 <input type="text" placeholder="Enter 4 Digit Pin"
                     class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0"
                     id="pin-input" />
             </div>
             <button class="btn bg-[#0874F2] text-white rounded-4xl h-14 text-xl font-semibold w-11/12"
-                id="login-btn">Add
+                id="add-money-btn">Add
                 Money</button>
         </div>
     </form>
 
+    <!-- cash out section  -->
+    <form id="cash-out-section" class="displayHiddenSection w-full flex flex-col items-center ">
 
+        <div class="mb-4 flex items-center px-5 justify-between w-11/12">
+            <h3 class="text-xl text-[rgba(8,8,8,0.9)] font-semibold">Cash Out</h3>
+        </div>
+        <div class="bg-white w-11/12 flex flex-col items-center gap-2 py-6">
+
+            <div class="flex flex-col gap-3 w-11/12">
+                <label for="phone" class="text-[#080808] font-medium">Agent Number</label>
+                <input type="text" placeholder="Enter your number"
+                    class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0"
+                    id="phone-input" />
+            </div>
+            <div class="flex flex-col gap-3 w-11/12">
+                <label for="pin" class="text-[#080808] font-medium">Amount</label>
+                <input type="text" placeholder="Enter 4 Digit Pin"
+                    class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0"
+                    id="pin-input" />
+            </div>
+            <div class="flex flex-col gap-3 w-11/12">
+                <label for="pin" class="text-[#080808] font-medium">Pin Number</label>
+                <input type="text" placeholder="Enter 4 Digit Pin"
+                    class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0"
+                    id="pin-input" />
+            </div>
+            <button class="btn bg-[#0874F2] text-white rounded-4xl h-14 text-xl font-semibold w-11/12"
+                id="login-btn">Widrow Money</button>
+        </div>
+    </form>
+
+
+    <!-- transfer money section  -->
+    <form id="transfer-money-section" class="displayHiddenSection w-full flex flex-col items-center ">
+
+        <div class="mb-4 flex items-center px-5 justify-between w-11/12">
+            <h3 class="text-xl text-[rgba(8,8,8,0.9)] font-semibold">Transfer Money</h3>
+        </div>
+        <div class="bg-white w-11/12 flex flex-col items-center gap-2 py-6">
+
+            <div class="flex flex-col gap-3 w-11/12">
+                <label for="phone" class="text-[#080808] font-medium">User Account Number</label>
+                <input type="text" placeholder="Enter your number"
+                    class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0"
+                    id="phone-input" />
+            </div>
+            <div class="flex flex-col gap-3 w-11/12">
+                <label for="pin" class="text-[#080808] font-medium">Amount</label>
+                <input type="text" placeholder="Enter 4 Digit Pin"
+                    class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0"
+                    id="pin-input" />
+            </div>
+            <div class="flex flex-col gap-3 w-11/12">
+                <label for="pin" class="text-[#080808] font-medium">Pin Number</label>
+                <input type="text" placeholder="Enter 4 Digit Pin"
+                    class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0"
+                    id="pin-input" />
+            </div>
+            <button class="btn bg-[#0874F2] text-white rounded-4xl h-14 text-xl font-semibold w-11/12"
+                id="login-btn">Send Money</button>
+        </div>
+    </form>
+
+
+    <!-- get bonus section  -->
+    <form id="get-bonus-section" class="displayHiddenSection w-full flex flex-col items-center ">
+
+        <div class="mb-4 flex items-center px-5 justify-between w-11/12">
+            <h3 class="text-xl text-[rgba(8,8,8,0.9)] font-semibold">Get bonus</h3>
+        </div>
+        <div class="bg-white w-11/12 flex flex-col items-center gap-2 py-6">
+            <div class="flex flex-col gap-3 w-11/12">
+                <label for="pin" class="text-[#080808] font-medium">Enter Bonus Coupon</label>
+                <input type="text" placeholder="Enter your coupon"
+                    class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0"
+                    id="pin-input" />
+            </div>
+            <button class="btn bg-[#0874F2] text-white rounded-4xl h-14 text-xl font-semibold w-11/12"
+                id="login-btn">Get Bonus</button>
+        </div>
+    </form>
+
+    <!-- Pay Bill section -->
+    <form id="pay-now-section" class="displayHiddenSection w-full flex flex-col items-center ">
+
+        <div class="mb-4 flex items-center px-5 justify-between w-11/12">
+            <h3 class="text-xl text-[rgba(8,8,8,0.9)] font-semibold">Pay Bill</h3>
+        </div>
+        <div class="bg-white w-11/12 flex flex-col items-center gap-2 py-6">
+            <div class="flex flex-col gap-3 w-11/12">
+                <label for="phone" class="text-[#080808] font-medium">Select To Pay</label>
+                <select
+                    class="select w-full h-14 rounded-4xl text-[rgba(8,8,8,0.7)] font-light bg-[#F4F5F7] border-0 outline-0">
+                    <option disabled selected>Select bank</option>
+                    <option>Islami Bank</option>
+                    <option>AB Bank</option>
+                    <option>Rupali Bank</option>
+                </select>
+
+            </div>
+            <div class="flex flex-col gap-3 w-11/12">
+                <label for="phone" class="text-[#080808] font-medium">Biller Account Number</label>
+                <input type="text" placeholder="Enter account number"
+                    class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0"
+                    id="phone-input" />
+            </div>
+            <div class="flex flex-col gap-3 w-11/12">
+                <label for="pin" class="text-[#080808] font-medium">Amount to Pay</label>
+                <input type="text" placeholder="Add amount to pay"
+                    class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0"
+                    id="pin-input" />
+            </div>
+            <div class="flex flex-col gap-3 w-11/12">
+                <label for="pin" class="text-[#080808] font-medium">Pin Number</label>
+                <input type="text" placeholder="Enter 4 Digit Pin"
+                    class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0"
+                    id="pin-input" />
+            </div>
+            <button class="btn bg-[#0874F2] text-white rounded-4xl h-14 text-xl font-semibold w-11/12"
+                id="login-btn">Pay Now</button>
+        </div>
+    </form>
+
+    <script src="./home.js"></script>
 
 </body>
 
