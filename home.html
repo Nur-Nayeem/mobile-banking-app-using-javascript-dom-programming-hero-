@@ -45,35 +45,35 @@
             </div>
             <div id="button-container" class="grid grid-cols-3 gap-4 text-sm py-6">
                 <button id="add-money-btn-box"
-                    class="flex flex-col items-center gap-2 py-5 px-4 border-1 border-[rgba(8,8,8,0.1)] rounded-xl ">
+                    class="button-boxs flex flex-col items-center gap-2 py-5 px-4 border-1 border-[rgba(8,8,8,0.1)] rounded-xl ">
                     <figure>
                         <img class="w-full h-full" src="./assets/wallet1.png" alt="">
                     </figure>
                     <p class="text-[rgba(8,8,8,0.7)]">Add Money</p>
                 </button>
                 <button id="cash-out-btn-box"
-                    class="flex flex-col items-center gap-2 py-5 px-4 border-1 border-[rgba(8,8,8,0.1)] rounded-xl ">
+                    class="button-boxs flex flex-col items-center gap-2 py-5 px-4 border-1 border-[rgba(8,8,8,0.1)] rounded-xl ">
                     <figure>
                         <img class="w-full h-full" src="./assets/send1.png" alt="">
                     </figure>
                     <p class="text-[rgba(8,8,8,0.7)]">Cashout</p>
                 </button>
                 <button id="send-money-btn-box"
-                    class="flex flex-col items-center gap-2 py-5 px-4 border-1 border-[rgba(8,8,8,0.1)] rounded-xl ">
+                    class="button-boxs flex flex-col items-center gap-2 py-5 px-4 border-1 border-[rgba(8,8,8,0.1)] rounded-xl ">
                     <figure>
                         <img class="w-full h-full" src="./assets/money1.png" alt="">
                     </figure>
                     <p class="text-[rgba(8,8,8,0.7)]">Transfer Money</p>
                 </button>
                 <button id="get-bonus-btn-box"
-                    class="flex flex-col items-center gap-2 py-5 px-4 border-1 border-[rgba(8,8,8,0.1)] rounded-xl ">
+                    class="button-boxs flex flex-col items-center gap-2 py-5 px-4 border-1 border-[rgba(8,8,8,0.1)] rounded-xl ">
                     <figure>
                         <img class="w-full h-full" src="./assets/bonus1.png" alt="">
                     </figure>
                     <p class="text-[rgba(8,8,8,0.7)]">Get Bonus</p>
                 </button>
                 <button id="pay-bill-btn-box"
-                    class="flex flex-col items-center gap-2 py-5 px-4 border-1 border-[rgba(8,8,8,0.1)] rounded-xl ">
+                    class="button-boxs flex flex-col items-center gap-2 py-5 px-4 border-1 border-[rgba(8,8,8,0.1)] rounded-xl ">
                     <figure>
                         <img class="w-full h-full" src="./assets/purse1.png" alt="">
                     </figure>
@@ -92,7 +92,7 @@
     </div>
 
     <!-- History  -->
-    <div id="transection-history" class="w-full flex flex-col items-center">
+    <div id="transection-history" class="all-form-section w-full flex flex-col items-center">
         <div class="mb-4 flex items-center px-5 justify-between w-11/12">
             <h3 id="history-type" class="text-xl text-[rgba(8,8,8,0.9)] font-semibold">Latest Payment</h3>
             <a class="text-[rgba(8,8,8,0.5)] text-sm" href="#">View All</a>
@@ -155,7 +155,7 @@
     </div>
 
     <!-- Add money section -->
-    <form id="add-money-section" class="displayHiddenSection w-full flex flex-col items-center ">
+    <form id="add-money-section" class="all-form-section displayHiddenSection w-full flex flex-col items-center ">
 
         <div class="mb-4 flex items-center px-5 justify-between w-11/12">
             <h3 class="text-xl text-[rgba(8,8,8,0.9)] font-semibold">Add Money</h3>
@@ -179,13 +179,13 @@
                     id="phone-input" />
             </div>
             <div class="flex flex-col gap-3 w-11/12">
-                <label for="pin" class="text-[#080808] font-medium">Amount to Add</label>
+                <label for="amount" class="text-[#080808] font-medium">Amount to Add</label>
                 <input id="add-amount-input" type="number" placeholder="Enter amount"
                     class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0" />
             </div>
             <div class="flex flex-col gap-3 w-11/12">
                 <label for="pin" class="text-[#080808] font-medium">Pin Number</label>
-                <input type="text" placeholder="Enter 4 Digit Pin"
+                <input type="number" placeholder="Enter 4 Digit Pin"
                     class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0"
                     id="pin-input" />
             </div>
@@ -196,7 +196,7 @@
     </form>
 
     <!-- cash out section  -->
-    <form id="cash-out-section" class="displayHiddenSection w-full flex flex-col items-center ">
+    <form id="cash-out-section" class="all-form-section displayHiddenSection w-full flex flex-col items-center ">
 
         <div class="mb-4 flex items-center px-5 justify-between w-11/12">
             <h3 class="text-xl text-[rgba(8,8,8,0.9)] font-semibold">Cash Out</h3>
@@ -210,25 +210,25 @@
                     id="phone-input" />
             </div>
             <div class="flex flex-col gap-3 w-11/12">
-                <label for="pin" class="text-[#080808] font-medium">Amount</label>
-                <input type="text" placeholder="Enter 4 Digit Pin"
+                <label for="amount" class="text-[#080808] font-medium">Amount</label>
+                <input type="number" placeholder="Amount To Cashout"
                     class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0"
-                    id="pin-input" />
+                    id="cash-out-amount" />
             </div>
             <div class="flex flex-col gap-3 w-11/12">
                 <label for="pin" class="text-[#080808] font-medium">Pin Number</label>
-                <input type="text" placeholder="Enter 4 Digit Pin"
+                <input type="number" placeholder="Enter 4 Digit Pin"
                     class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0"
                     id="pin-input" />
             </div>
             <button class="btn bg-[#0874F2] text-white rounded-4xl h-14 text-xl font-semibold w-11/12"
-                id="login-btn">Widrow Money</button>
+                id="cash-out-btn">Widrow Money</button>
         </div>
     </form>
 
 
     <!-- transfer money section  -->
-    <form id="transfer-money-section" class="displayHiddenSection w-full flex flex-col items-center ">
+    <form id="transfer-money-section" class="all-form-section displayHiddenSection w-full flex flex-col items-center ">
 
         <div class="mb-4 flex items-center px-5 justify-between w-11/12">
             <h3 class="text-xl text-[rgba(8,8,8,0.9)] font-semibold">Transfer Money</h3>
@@ -242,10 +242,10 @@
                     id="phone-input" />
             </div>
             <div class="flex flex-col gap-3 w-11/12">
-                <label for="pin" class="text-[#080808] font-medium">Amount</label>
-                <input type="text" placeholder="Enter 4 Digit Pin"
+                <label for="transfer" class="text-[#080808] font-medium">Amount</label>
+                <input type="number" placeholder="Amount To Transfer"
                     class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0"
-                    id="pin-input" />
+                    id="transfer-money-input" />
             </div>
             <div class="flex flex-col gap-3 w-11/12">
                 <label for="pin" class="text-[#080808] font-medium">Pin Number</label>
@@ -254,31 +254,31 @@
                     id="pin-input" />
             </div>
             <button class="btn bg-[#0874F2] text-white rounded-4xl h-14 text-xl font-semibold w-11/12"
-                id="login-btn">Send Money</button>
+                id="transfer-money-btn">Send Money</button>
         </div>
     </form>
 
 
     <!-- get bonus section  -->
-    <form id="get-bonus-section" class="displayHiddenSection w-full flex flex-col items-center ">
+    <form id="get-bonus-section" class="all-form-section displayHiddenSection w-full flex flex-col items-center ">
 
         <div class="mb-4 flex items-center px-5 justify-between w-11/12">
             <h3 class="text-xl text-[rgba(8,8,8,0.9)] font-semibold">Get bonus</h3>
         </div>
         <div class="bg-white w-11/12 flex flex-col items-center gap-2 py-6">
             <div class="flex flex-col gap-3 w-11/12">
-                <label for="pin" class="text-[#080808] font-medium">Enter Bonus Coupon</label>
-                <input type="text" placeholder="Enter your coupon"
+                <label for="bonus" class="text-[#080808] font-medium">Enter Bonus Coupon</label>
+                <input type="number" placeholder="Enter your coupon"
                     class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0"
-                    id="pin-input" />
+                    id="get-bonus-input" />
             </div>
             <button class="btn bg-[#0874F2] text-white rounded-4xl h-14 text-xl font-semibold w-11/12"
-                id="login-btn">Get Bonus</button>
+                id="get-bonus-btn">Get Bonus</button>
         </div>
     </form>
 
     <!-- Pay Bill section -->
-    <form id="pay-now-section" class="displayHiddenSection w-full flex flex-col items-center ">
+    <form id="pay-now-section" class="all-form-section displayHiddenSection w-full flex flex-col items-center ">
 
         <div class="mb-4 flex items-center px-5 justify-between w-11/12">
             <h3 class="text-xl text-[rgba(8,8,8,0.9)] font-semibold">Pay Bill</h3>
@@ -305,7 +305,7 @@
                 <label for="pin" class="text-[#080808] font-medium">Amount to Pay</label>
                 <input type="text" placeholder="Add amount to pay"
                     class="input w-full h-14 rounded-4xl text-[#080808] font-light bg-[#F4F5F7] border-0 outline-0"
-                    id="pin-input" />
+                    id="pay-bill-amount" />
             </div>
             <div class="flex flex-col gap-3 w-11/12">
                 <label for="pin" class="text-[#080808] font-medium">Pin Number</label>
@@ -314,7 +314,7 @@
                     id="pin-input" />
             </div>
             <button class="btn bg-[#0874F2] text-white rounded-4xl h-14 text-xl font-semibold w-11/12"
-                id="login-btn">Pay Now</button>
+                id="pay-bill-btn">Pay Now</button>
         </div>
     </form>
 

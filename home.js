@@ -1,9 +1,13 @@
+const allFormSections = document.getElementsByClassName('all-form-section')
+const allButtons = document.getElementsByClassName('button-boxs')
+
 const transectionHistory = document.getElementById("transection-history");
 const addMoneySection = document.getElementById("add-money-section");
 const cashOutSection = document.getElementById("cash-out-section");
 const transferMoneySection = document.getElementById("transfer-money-section");
 const getBonusSection = document.getElementById("get-bonus-section");
 const payNowSection = document.getElementById("pay-now-section");
+
 
 const addMoneyBtnBox = document.getElementById("add-money-btn-box");
 const cashOutBtnBox = document.getElementById("cash-out-btn-box");
@@ -14,17 +18,14 @@ const transectionHistoryBox = document.getElementById("transection-history-box")
 
 function resetAll() {
     transectionHistory.classList.remove('displayHiddenSection');
-    addMoneySection.classList.remove('displayShowSection');
-    cashOutSection.classList.remove('displayShowSection');
-    transferMoneySection.classList.remove('displayShowSection');
-    getBonusSection.classList.remove('displayShowSection');
-    payNowSection.classList.remove('displayShowSection');
 
-    addMoneyBtnBox.classList.remove('active-btn');
-    cashOutBtnBox.classList.remove('active-btn');
-    sendMoneyBtnBox.classList.remove('active-btn');
-    getBonusBtnBox.classList.remove('active-btn');
-    payBillBtnBox.classList.remove('active-btn');
+    for (let section of allFormSections) {
+        section.classList.remove('displayShowSection');
+    }
+    for (let button of allButtons) {
+        button.classList.remove('active-btn');
+    }
+
 }
 
 addMoneyBtnBox.addEventListener("click", () => {
@@ -35,16 +36,13 @@ addMoneyBtnBox.addEventListener("click", () => {
     }
     // Hide others
     transectionHistory.classList.add('displayHiddenSection');
-    cashOutSection.classList.remove('displayShowSection');
-    transferMoneySection.classList.remove('displayShowSection');
-    getBonusSection.classList.remove('displayShowSection');
-    payNowSection.classList.remove('displayShowSection');
-    cashOutBtnBox.classList.remove('active-btn');
-    sendMoneyBtnBox.classList.remove('active-btn');
-    getBonusBtnBox.classList.remove('active-btn');
-    payBillBtnBox.classList.remove('active-btn');
-    transectionHistoryBox.classList.remove('active-btn');
 
+    for (let section of allFormSections) {
+        section.classList.remove('displayShowSection');
+    }
+    for (let button of allButtons) {
+        button.classList.remove('active-btn');
+    }
     // Show Add Money
     addMoneySection.classList.add('displayShowSection');
     addMoneyBtnBox.classList.add('active-btn');
@@ -58,17 +56,13 @@ cashOutBtnBox.addEventListener("click", () => {
     }
     // Hide others
     transectionHistory.classList.add('displayHiddenSection');
-    addMoneySection.classList.remove('displayShowSection');
-    transferMoneySection.classList.remove('displayShowSection');
-    getBonusSection.classList.remove('displayShowSection');
-    payNowSection.classList.remove('displayShowSection');
 
-    addMoneyBtnBox.classList.remove('active-btn');
-    sendMoneyBtnBox.classList.remove('active-btn');
-    getBonusBtnBox.classList.remove('active-btn');
-    payBillBtnBox.classList.remove('active-btn');
-    transectionHistoryBox.classList.remove('active-btn');
-
+    for (let section of allFormSections) {
+        section.classList.remove('displayShowSection');
+    }
+    for (let button of allButtons) {
+        button.classList.remove('active-btn');
+    }
 
     // Show Cash Out
     cashOutSection.classList.add('displayShowSection');
@@ -83,16 +77,13 @@ sendMoneyBtnBox.addEventListener("click", () => {
     }
     // Hide others
     transectionHistory.classList.add('displayHiddenSection');
-    addMoneySection.classList.remove('displayShowSection');
-    getBonusSection.classList.remove('displayShowSection');
-    cashOutSection.classList.remove('displayShowSection');
-    payNowSection.classList.remove('displayShowSection');
-    addMoneyBtnBox.classList.remove('active-btn');
-    cashOutBtnBox.classList.remove('active-btn');
-    getBonusBtnBox.classList.remove('active-btn');
-    payBillBtnBox.classList.remove('active-btn');
-    transectionHistoryBox.classList.remove('active-btn');
 
+    for (let section of allFormSections) {
+        section.classList.remove('displayShowSection');
+    }
+    for (let button of allButtons) {
+        button.classList.remove('active-btn');
+    }
 
     // Show Cash Out
     transferMoneySection.classList.add('displayShowSection');
@@ -107,17 +98,13 @@ getBonusBtnBox.addEventListener("click", () => {
     }
     // Hide others
     transectionHistory.classList.add('displayHiddenSection');
-    addMoneySection.classList.remove('displayShowSection');
-    transferMoneySection.classList.remove('displayShowSection');
-    cashOutSection.classList.remove('displayShowSection');
-    payNowSection.classList.remove('displayShowSection');
-    addMoneyBtnBox.classList.remove('active-btn');
-    sendMoneyBtnBox.classList.remove('active-btn');
-    cashOutBtnBox.classList.remove('active-btn');
-    payBillBtnBox.classList.remove('active-btn');
-    transectionHistoryBox.classList.remove('active-btn');
 
-
+    for (let section of allFormSections) {
+        section.classList.remove('displayShowSection');
+    }
+    for (let button of allButtons) {
+        button.classList.remove('active-btn');
+    }
 
     // Show Cash Out
     getBonusSection.classList.add('displayShowSection');
@@ -131,21 +118,19 @@ payBillBtnBox.addEventListener("click", () => {
     }
     // Hide others
     transectionHistory.classList.add('displayHiddenSection');
-    addMoneySection.classList.remove('displayShowSection');
-    transferMoneySection.classList.remove('displayShowSection');
-    cashOutSection.classList.remove('displayShowSection');
-    getBonusSection.classList.remove('displayShowSection');
-    addMoneyBtnBox.classList.remove('active-btn');
-    sendMoneyBtnBox.classList.remove('active-btn');
-    cashOutBtnBox.classList.remove('active-btn');
-    getBonusBtnBox.classList.remove('active-btn');
-    transectionHistoryBox.classList.remove('active-btn');
 
+    for (let section of allFormSections) {
+        section.classList.remove('displayShowSection');
+    }
+    for (let button of allButtons) {
+        button.classList.remove('active-btn');
+    }
 
     // Show Cash Out
     payNowSection.classList.add('displayShowSection');
     payBillBtnBox.classList.add('active-btn');
 });
+
 transectionHistoryBox.addEventListener("click", () => {
     const isActive = transectionHistoryBox.classList.contains('active-btn');
     const historyType = document.getElementById('history-type')
@@ -163,26 +148,100 @@ transectionHistoryBox.addEventListener("click", () => {
 
 });
 
-
-
-const addMoneyBtn = document.getElementById('add-money-btn');
-
-if (addMoneyBtn) {
-    addMoneyBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const availableMoney = document.getElementById('money');
-        const addAmountInput = document.getElementById('add-amount-input');
-        let totalMoney = parseInt(availableMoney.innerText, 10);
-        if (addAmountInput) {
-            totalMoney += parseInt(addAmountInput.value, 10)
-            availableMoney.innerText = totalMoney.toString()
-            console.log(totalMoney);
-        } else {
-            console.error('Input field with ID "add-amount-input" not found.');
-        }
-    });
-} else {
-    console.error('Button with ID "add-money-btn" not found.');
+function getInputValue(id) {
+    return document.getElementById(id).value;
 }
+
+function getMoney() {
+    return parseInt(document.getElementById('money').innerText);
+}
+
+function setMoney(totalMoney) {
+    document.getElementById('money').innerText = totalMoney.toString();
+}
+function addMoney(id) {
+    let availableMoney = getMoney();
+    availableMoney += parseInt(document.getElementById(id).value)
+    document.getElementById(id).value = ''
+    if (availableMoney)
+        setMoney(availableMoney)
+    else
+        console.log('something wrong');
+}
+function reduceMoney(id) {
+    let availableMoney = getMoney();
+    availableMoney -= parseInt(document.getElementById(id).value)
+    document.getElementById(id).value = ''
+    if (availableMoney)
+        setMoney(availableMoney)
+    else
+        console.log('something wrong');
+}
+
+
+function resetInputFields(tag) {
+    let inputs = document.querySelectorAll(tag);
+    for (let input of inputs) {
+        if (input.tagName === 'SELECT') {
+            input.selectedIndex = 0; // reset to first option
+        } else {
+            input.value = '';
+        }
+    }
+}
+
+
+
+//add money:
+document.getElementById('add-money-btn').addEventListener('click', (e) => {
+    e.preventDefault();
+    addMoney('add-amount-input')
+    resetInputFields('input')
+
+});
+
+//cash money:
+document.getElementById('cash-out-btn').addEventListener('click', (e) => {
+    e.preventDefault();
+    reduceMoney('cash-out-amount')
+    resetInputFields('input')
+});
+
+
+//transfer money
+document.getElementById('transfer-money-btn').addEventListener('click', (e) => {
+    e.preventDefault();
+    reduceMoney('transfer-money-input')
+    resetInputFields('input')
+});
+
+//pay bill:
+document.getElementById('pay-bill-btn').addEventListener('click', (e) => {
+    e.preventDefault();
+    reduceMoney('pay-bill-amount')
+    resetInputFields('input')
+});
+
+
+//get bonus:
+document.getElementById('get-bonus-btn').addEventListener('click', (e) => {
+    e.preventDefault();
+    let code = getInputValue('get-bonus-input')
+    console.log(code);
+
+    if (code === '1234') {
+        let total = getMoney() + 100;
+        setMoney(total);
+        console.log('success');
+        document.getElementById('get-bonus-btn').setAttribute("disabled", "true");
+    }
+    else {
+        console.log('wrong');
+
+    }
+    resetInputFields('input')
+});
+
+
 
 
